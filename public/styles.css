@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 10%;
+    width: 80%;
+    max-width: 1200px;  
+    font-size: 18px;  
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #839098;
+    padding: 20px;
+}
+
+/* pseudo classes to style links */
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(0, 0, 0);
+}
+
+a:hover {
+    color: aqua;
+}
+
+a:active {
+    color: red;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ol {
+    padding-left: 35px
+}
+
+body {
+    font-family: Helvetica;
+}
+
+p {
+    padding: 10px;
+}
+
+.post, .itinerary, .about {
+
+    margin: 2em 1em;
+    padding: 2em;
+    background-color: #BFCACE;
+}
+
+/* descendant selector */
+
+.about em {
+    font-size: 2em;
+    font-style: normal;
+}
+
+.header-link {
+    text-decoration: none;
+}
+
+#author{
+    width: 30%;
+    height: 30%;
+    float: left; 
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation-item {
+    margin: 10px 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #839098;
+}
