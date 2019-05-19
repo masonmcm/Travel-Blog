@@ -21,7 +21,6 @@
 /* pseudo classes to style links */
 
 a:link {
-    color: blue;
     text-decoration: none;
 }
 
