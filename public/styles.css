@@ -102,7 +102,7 @@ p {
 
 .about em {
     font-size: 2em;
-    font-style: normal;
+    font-weight: bold;
 }
 
 .header-link {
