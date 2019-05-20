@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 .container {
     margin: 0 10%;
     width: 80%;
@@ -14,8 +15,41 @@
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: #839098;
+    /* background-color: #839098; */
+    color: white;
+    background-color: black;
     padding: 20px;
+}
+
+#author {
+    width: 30%;
+    height: 30%;
+    overflow: auto;
+    float: left; 
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+#fashion-shot {
+    transform: rotate(90deg);
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.border-red {
+    border-left: 5px solid #ED4B3A;
+}
+
+.border-yellow {
+    border-left: 5px solid #F5C023;
+}
+
+.border-blue {
+    border-left: 5px solid #0380BC;
 }
 
 /* pseudo classes to style links */
@@ -24,11 +58,15 @@ a:link {
     text-decoration: none;
 }
 
-a:visited {
-    color: rgb(0, 0, 0);
+.header a:visited {
+    color: white;
 }
 
-a:hover {
+a:visited {
+    color: black;
+}
+
+a:visited:hover {
     color: aqua;
 }
 
@@ -46,6 +84,7 @@ ol {
 
 body {
     font-family: Helvetica;
+    background-image: url(circles.svg);
 }
 
 p {
@@ -53,10 +92,10 @@ p {
 }
 
 .post, .itinerary, .about {
-
     margin: 2em 1em;
     padding: 2em;
     background-color: #BFCACE;
+    overflow: auto;
 }
 
 /* descendant selector */
@@ -70,24 +109,10 @@ p {
     text-decoration: none;
 }
 
-#author{
-    width: 30%;
-    height: 30%;
-    float: left; 
-    padding-right: 20px;
-    padding-bottom: 20px;
-}
-
 .navigation {
     display: flex;
 }
 
 .navigation-item {
     margin: 10px 10px;
-}
-
-.footer {
-    text-align: center;
-    padding: 1em;
-    background-color: #839098;
 }
