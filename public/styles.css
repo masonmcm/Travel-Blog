@@ -7,6 +7,7 @@
 
 .container {
     margin: 0 10%;
+    flex: 1 0 auto;
     width: 80%;
     max-width: 1200px;  
     font-size: 18px;  
@@ -15,7 +16,6 @@
 .header {
     display: flex;
     justify-content: space-between;
-    /* background-color: #839098; */
     color: white;
     background-color: black;
     padding: 20px;
@@ -41,15 +41,15 @@
 }
 
 .border-red {
-    border-left: 5px solid #ED4B3A;
+    border-right: 5px solid #ED4B3A;
 }
 
 .border-yellow {
-    border-left: 5px solid #F5C023;
+    border-right: 5px solid #F5C023;
 }
 
 .border-blue {
-    border-left: 5px solid #0380BC;
+    border-right: 5px solid #0380BC;
 }
 
 /* pseudo classes to style links */
@@ -83,8 +83,12 @@ ol {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: Helvetica;
     background-image: url(circles.svg);
+    background-size: 120%;
+    background-position-y: -1800px;
 }
 
 p {
@@ -92,10 +96,15 @@ p {
 }
 
 .post, .itinerary, .about {
-    margin: 2em 1em;
+    margin: 1em 1em;
     padding: 2em;
     background-color: #BFCACE;
     overflow: auto;
+    height: 30%;
+}
+
+.content {
+    padding: 10px;
 }
 
 /* descendant selector */
@@ -115,4 +124,14 @@ p {
 
 .navigation-item {
     margin: 10px 10px;
+}
+
+.footer {
+    bottom: 0;
+    text-align: center;
+    width: 250px;
+    margin: 10px auto 20px auto;
+    flex-shrink: 0;
+    border: 1px solid black;
+    height: 45px;
 }
