@@ -66,12 +66,28 @@ a:visited {
     color: black;
 }
 
-a:visited:hover {
-    color: aqua;
+.header-title a:visited:hover {
+    color: #ED4B3A;
+}
+
+.navigation-itinerary a:visited:hover {
+    color: #F5C023;
+}
+
+.navigation-about a:visited:hover {
+    color: #0380BC;
 }
 
 a:active {
     color: red;
+}
+
+h1, h2, .navigation-itinerary, .navigation-about, .greeting {
+    font-family: 'Lobster', cursive;
+}
+
+.navigation-itinerary, .navigation-about, .post-title, .itinerary-title{
+    font-size: 1.5em;
 }
 
 ul {
@@ -110,7 +126,7 @@ p {
 /* descendant selector */
 
 .about em {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bold;
 }
 
@@ -118,12 +134,19 @@ p {
     text-decoration: none;
 }
 
+.header-title {
+    font-family: 'Lobster', cursive;
+    padding: 8px;
+    border: 1px solid white;
+}
+
 .navigation {
     display: flex;
 }
 
-.navigation-item {
+.navigation-itinerary, .navigation-about {
     margin: 10px 10px;
+    padding: 8px;
 }
 
 .footer {
