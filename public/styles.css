@@ -4,30 +4,24 @@
     box-sizing: border-box;
 }
 
-
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 10%;
     flex: 1 0 auto;
     width: 80%;
     max-width: 1200px;  
-    font-size: 18px;  
+}
+
+.header-container {
+    width: 100%;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
     color: white;
     background-color: black;
     padding: 20px;
-}
-
-#author {
-    width: 30%;
-    height: 30%;
-    overflow: auto;
-    float: left; 
-    padding-right: 20px;
-    padding-bottom: 20px;
 }
 
 #fashion-shot {
@@ -40,21 +34,8 @@
     margin-bottom: 20px;
 }
 
-.border-red {
-    border-right: 5px solid #ED4B3A;
-}
-
-.border-yellow {
-    border-right: 5px solid #F5C023;
-}
-
-.border-blue {
-    border-right: 5px solid #0380BC;
-}
-
-/* pseudo classes to style links */
-
-a:link {
+a:visited, a:link {
+    color: black;
     text-decoration: none;
 }
 
@@ -62,8 +43,8 @@ a:link {
     color: white;
 }
 
-a:visited {
-    color: black;
+a:visited:hover {
+    color: cyan;
 }
 
 .header-title a:visited:hover {
@@ -123,8 +104,6 @@ p {
     padding: 10px;
 }
 
-/* descendant selector */
-
 .about em {
     font-size: 3em;
     font-weight: bold;
@@ -153,8 +132,87 @@ p {
     bottom: 0;
     text-align: center;
     width: 250px;
+    border: 1px solid black;
     margin: 10px auto 20px auto;
     flex-shrink: 0;
-    border: 1px solid black;
     height: 45px;
+}
+
+
+
+@media only screen and (max-width: 960px) {
+    .header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .navigation-about {
+        text-align: center;
+    }
+
+    .fixed-footer {
+        position: static;
+    }
+
+    .container {
+        font-size: 18px;  
+    }
+    
+    .header {
+        padding: 5px;
+    }
+
+    #author {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .about {
+        display: block;
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (min-width: 401px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #author {
+        width: 30%;
+        height: 30%;
+        overflow: auto;
+        float: left; 
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    .border-red {
+        border-right: 5px solid #ED4B3A;
+    }
+    
+    .border-yellow {
+        border-right: 5px solid #F5C023;
+    }
+    
+    .border-blue {
+        border-right: 5px solid #0380BC;
+    }
+
+    .container {
+        font-size: 18px;  
+    }
+
+    #author {
+        width: 30%;
+        height: 30%;
+        overflow: auto;
+        float: left; 
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
 }
