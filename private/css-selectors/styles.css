@@ -1,0 +1,106 @@
+/* The dot before the class name distinguishes 
+class selectors from type selectors */
+
+
+.synopsis {
+    color: #7E8184;        /* Light gray */
+    font-style: italic;
+}
+
+/* Descendent Selector */
+
+.synopsis em {
+    font-style: normal;
+}
+
+.button:link, .button:visited {
+    display: block; /* a elements are inline by default */
+    text-decoration: none;
+
+    color: #FFF;
+    background-color: #5995DA;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #5D6063;
+    border-radius: 5px;
+
+    width: 200px;
+    margin: 20px auto;
+}
+
+.button:hover, .button:visited:hover {
+    color: #FFF; 
+    background-color: #76AEED;  /* Light blue */
+}
+
+.button:active, .button:visited:active {
+    color: #FFF; 
+    background-color: #5995DA;  /* Blue */
+
+}
+
+.page {
+    width: 600px;
+    margin: 0 auto; /* vertical, horizontal */
+}
+
+p:last-of-type {
+    margin-bottom: 50px;
+}
+
+/* Overriding occurs because of the class order in the stylesheet 
+Order in the HTML doc doesn't matter */
+
+.call-to-action:link, 
+.call-to-action:visited {
+    font-style: italic;
+    background-color: #EEB75A;    /* Yellow */
+}
+
+.call-to-action:hover, 
+.call-to-action:visited:hover {
+    background-color: #F5CF8E;     /* Light yellow */
+}
+
+.call-to-action:active,
+.call-to-action:visited:active {
+  background-color: #EEB75A;     /* Yellow */
+}
+
+/* Basic Link Styles (Pseudo-Classes) */
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
+a:active {
+    color: red;
+}
+
+a:visited:hover {
+    color: orange;
+}
+
+a:visited:active {
+    color: red;
+}
+
+/*CSS Selectors for IDs must begin with a '#' i
+instead of a '.' which is reserved for class 
+selectors */
+
+#button-2 {
+    color: #5D6063;  /* Dark gray */
+}
+

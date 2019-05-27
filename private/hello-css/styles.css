@@ -1,0 +1,47 @@
+/* Base size is set to be 18px, h1 is 2x that, h2 is 1.6x*/
+body {
+    color: #888181;
+    background-color: #EEEEEE;
+    font-size: 18 px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+ol {
+    list-style-type: lower-roman;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    text-align: left;
+}
+
+/* Swap em and strong appearances */
+
+em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+strong {
+    font-weight: normal;
+    font-style: italic;
+}
