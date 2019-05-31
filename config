@@ -1,0 +1,10 @@
+Host * 
+    AddsKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_rsa
+
+Host blog
+    HostName
+    User ubuntu
+    IdentityFile ~/.ssh/COMP426-2019.pem
+
