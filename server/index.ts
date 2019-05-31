@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 
 app.get("/itinerary", (req, res) => {
     res.render("itinerary", {
-        title: "Itinerary"
+        title: "Itinerary- nice"
     })
 });
 
