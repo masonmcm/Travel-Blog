@@ -1,0 +1,11 @@
+<body>
+    <ul>
+        {{#each todos}}
+            {{#if url}}
+                <li><a href={{url}}>{{id}}: {{description}}. URL: {{url}}</a></li>
+            {{else}}
+                <li>{{id}}: {{description}}.</li>
+            {{/if}}
+        {{/each}}
+    </ul>
+</body>
