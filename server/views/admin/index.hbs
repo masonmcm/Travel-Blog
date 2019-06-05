@@ -1,0 +1,30 @@
+<nav aria-label="breadcrumb mb-4">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="Page">Home</li>
+  </ol>
+</nav>
+
+<div class="container pt-1">
+    <ul>
+        <li><a href="/admin/todos">Todos</a></li>
+    </ul>
+</div>
+
+<hr>
+<a href="/admin/logout" class="btn btn-sm btn-light">Logout</a>
+<hr>
+
+<table class ="table">
+    <thead>
+        <tr><th>ID</th><th>Description</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+        {{#each todos}}
+        <tr>
+            <td> {{ id }} </td>
+            <td> {{ description }} </td>
+            <td><a href="/admin/todos/{{id}}" class="btn btn-sm btn-primary">Edit</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

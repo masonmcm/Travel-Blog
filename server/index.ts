@@ -8,10 +8,13 @@ import * as exphbs from "express-handlebars"
 
 let app = express();
 
+import admin from "./admin";
+
 // Serve static files from the dist directory which parcel builds from our 
 // npm run build command. 
 
 app.use(express.static("dist/"));
+app.use(express.urlencoded({extended: true}));
 
 // What's the difference between this and the aforementioned line? 
 // app.use("/static", express.static("dist/"));
@@ -25,7 +28,6 @@ app.engine("hbs", exphbs({
 
 app.get("/", async (req, res) => {
     let [rows] = await DB.query<Rows>("SELECT * FROM posts ORDER BY publishAt DESC");
-    console.log(rows);
     res.render("index", {
         title: "On the Go!",
         posts: rows,
@@ -76,6 +78,7 @@ app.get("/gallery", (req, res) => {
     })
 });
 
+app.use("/admin", admin);
 
 export let main = async () => {
     app.listen(process.env.PORT, () => console.log(`Listening on ${process.env.PORT}`))

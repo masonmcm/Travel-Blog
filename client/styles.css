@@ -87,7 +87,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Helvetica;
-    background-image: url(circles.svg);
+    background-image: url(./img/circles.svg);
     background-size: 120%;
     background-position-y: -1800px;
 }
