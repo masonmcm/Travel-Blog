@@ -1,0 +1,43 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+    <li class="breadcrumb-item"><a href="/admin/todos">Todos</a></li>
+    <li class="breadcrumb-item active" aria-current="page">
+        {{#if post.id }}
+            {{ post.title }}
+        {{else}}
+            New
+        {{/if}}
+    </li>
+  </ol>
+</nav>
+
+<form action="{{ action }}" method="POST">
+    {{#if message }}
+        <div class="alert alert-dark">{{ message }}</div>
+    {{/if}}
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" class="form-control" value="{{ post.title }}">
+        <small class="form-text text-muted">What will you call your post?</small>
+    </div>
+    <div class="form-group">
+        <label for="body">Post Body</label>
+        <!--<input type="text" name="description" id="description" class="form-control" value="{{ todo.description }}">-->
+        <textarea class="form-control" name="body" rows="10" value="{{ post.body }}"> {{{ post.body }}} </textarea>
+        <small class="form-text text-muted">Write out the post body!</small>
+    </div>
+    <div class="form-group">
+        <label for="date">Date</label>
+        <input type="text" name="publishAt" id="publishAt" class="form-control" value="{{ post.publishAt }}">
+        <small class="form-text text-muted">When was this post published?</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="/admin/posts" class="btn btn-secondary">Back</a>
+</form>
+{{#if post.id }}
+<hr>
+<form action="{{ action }}/delete" method="POST" onsubmit="return confirm('Are you sure?')">
+    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+</form>
+{{/if}}

@@ -34,8 +34,6 @@ app.get("/", async (req, res) => {
     })
 });
 
-
-
 app.get("/todos.json", async (req, res) => {
     let [rows] = await DB.query<Rows>("SELECT * FROM todos");
     res.json(rows);
