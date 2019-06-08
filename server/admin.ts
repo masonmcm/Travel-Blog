@@ -22,8 +22,9 @@ router.get("/login", (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
-    let isValid = await bcrypt.compare(req.body.password, process.env.ADMIN_PASSWORD_HASH);
-    if(isValid) {
+    let genericLogin = await bcrypt.compare(req.body.password, process.env.ADMIN_PASSWORD_HASH);
+    let specializedLogin = await bcrypt.compare(req.body.password, process.env.SPECIAL_PASSWORD_HASH);
+    if(genericLogin || specializedLogin) {
         res.cookie("authenticated", "true", {
             signed: true // by using the signed option, our cookie is secure
         });

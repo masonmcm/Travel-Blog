@@ -152,6 +152,7 @@ template {
     display: flex;
     overflow-x: auto;
     height: 20vh;
+    background-color: black;
 }
 
 
@@ -164,9 +165,9 @@ template {
     align-items: center;
 }
 
-.gallery__thumb.selected .gallery__thumb-img-wrap {
+/* .gallery__thumb.selected .gallery__thumb-img-wrap {
     border: 2px solid #333;
-}
+} */
 
 .gallery__thumb:hover {
     cursor: pointer;
@@ -174,7 +175,6 @@ template {
 
 .gallery__thumb-img-wrap {
     display: block;
-    border: 2px solid black;
     width: 19vh;
     height: 19vh;
     display: flex;
